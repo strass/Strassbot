@@ -1,1 +1,1 @@
-app: bin/hubot -a hubot-irc -n Strassbot
+app: bin/hubot -a irc -n Strassbot
