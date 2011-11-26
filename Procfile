@@ -1,0 +1,1 @@
+app: bin/hubot -a IRC -n Strassbot
