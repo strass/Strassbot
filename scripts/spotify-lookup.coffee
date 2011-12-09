@@ -39,4 +39,4 @@ module.exports = (robot) ->
                 result = data.artists[i]
                 results += "#{result.name}: #{result.href} | "
               msg.send msg.results
-        msg.send "error!"
+        msg.send "Error: #{err}"
