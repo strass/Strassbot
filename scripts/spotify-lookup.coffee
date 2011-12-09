@@ -2,7 +2,7 @@ sh = require('sh')
 spotify = require('spotify')
 
 module.exports = (robot) ->
-  robot.respond \spotify search ?(album|track|song|artist)? (*)$\i (msg) ->
+  robot.respond /spotify search ?(album|track|song|artist)? (*)$/i (msg) ->
     query = msg.match[2]
     if msg.match[1]?
       switch msg.match[1]
