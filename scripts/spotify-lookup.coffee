@@ -21,21 +21,21 @@ module.exports = (robot) ->
             when "track"
               i = 0
               results = ""
-              while i < 4 or i < data.info.num_results
+              while i < 4 and i < data.info.num_results
                 result = data.tracks[i]
                 results += "#{result.name} by #{result.artists.name}: #{result.href} | "
               msg.send msg.results
             when "album"
               i = 0
               results = ""
-              while i < 4 or i < data.info.num_results
+              while i < 4 and i < data.info.num_results
                 result = data.albums[i]
                 results += "#{result.name} by #{result.artists.name}: #{result.href} | "
               msg.send msg.results
             when "artist"
               i = 0
               results = ""
-              while i < 4 or i < data.info.num_results
+              while i < 4 and i < data.info.num_results
                 result = data.artists[i]
                 results += "#{result.name}: #{result.href} | "
               msg.send msg.results
