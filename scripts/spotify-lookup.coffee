@@ -1,4 +1,4 @@
-spotify = require "node-spotify"
+spotify = require "spotify"
 
 module.exports = (robot) ->
   robot.respond /spotify search ?(album|track|song|artist)? (.*)/i, (msg) ->
