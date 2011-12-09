@@ -1,4 +1,3 @@
-sh = require "sh"
 spotify = require "spotify"
 
 module.exports = (robot) ->
