@@ -1,5 +1,5 @@
-sh = require('sh')
-spotify = require('spotify')
+sh = require "sh"
+spotify = require "spotify"
 
 module.exports = (robot) ->
   robot.respond /spotify search ?(album|track|song|artist)? (.*)/i, (msg) ->
