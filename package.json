@@ -19,6 +19,6 @@
     "hubot-scripts": ">= 2.0.2",
     "hubot-irc": ">= 0.0.1",
     "optparse": "1.0.3",
-    "node-spotify": ">= 0.0.1"
+    "spotify": ">= 0.0.1"
   }
 }
