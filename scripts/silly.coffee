@@ -62,3 +62,6 @@ module.exports = (robot) ->
     
   robot.hear /^nope$/i, (message) ->
     message.send message.random chucktestas
+
+  robot.hear /higher/i, (message) ->
+	message.send "Can we get much higher?"
