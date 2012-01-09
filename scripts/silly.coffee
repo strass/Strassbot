@@ -2,12 +2,6 @@
 #
 # When the robot hears one of these phrases a wild picture appears
 
-chucktestas = [
-  "chuck testa"
-  "just chuck testa"
-  "chuck testa with another realistic mount"
-  ]
-
 module.exports = (robot) ->
   robot.hear /my spoon is too big/i, (message) ->
     message.send "http://i.imgur.com/Rz1AO.gif"
@@ -27,8 +21,8 @@ module.exports = (robot) ->
   robot.hear /winter is coming/i, (message) ->
     message.send "http://i.imgur.com/Mzzbx.gif"
 
-  robot.hear /higher/i, (message) ->
-    message.send "Can we get much higher?"
+  robot.hear /can (we|i) get much higher/i, (message) ->
+    message.send "http://www.youtube.com/watch?v=SpKFDzVaJUM"
         
   robot.hear /i(')?ve made a huge mistake/i, (message) ->
     message.send "http://i.imgur.com/Ql0i6.gif"
@@ -62,6 +56,3 @@ module.exports = (robot) ->
     
   robot.hear /say what/i, (message) ->
     message.send "http://www.youtube.com/watch?v=yqyixwqiCag"
-    
-  robot.hear /^nope$/i, (message) ->
-    message.send message.random chucktestas
