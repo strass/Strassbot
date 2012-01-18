@@ -4,7 +4,7 @@
 #
 
 module.exports = (robot) ->
-  robot.hear /^np (.*)/i, (msg) ->
+  robot.hear /^np( (.*))?/i, (msg) ->
     user = escape(msg.match[1])
     apiKey = process.env.HUBOT_LASTFM_APIKEY
     msg.http('http://ws.audioscrobbler.com/2.0/?')
@@ -15,4 +15,4 @@ module.exports = (robot) ->
           msg.send results.message
           return
         song = results.recenttracks.track[0]
-        msg.send "#{song.name} by #{song.artist['#text']}"
+        msg.send "#{user} is listening to \"#{song.name}\" by \"#{song.artist['#text']}\""

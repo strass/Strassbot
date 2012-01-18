@@ -21,7 +21,7 @@ module.exports = (robot) ->
   robot.hear /winter is coming/i, (message) ->
     message.send "http://i.imgur.com/Mzzbx.gif"
 
-  robot.hear /can (we|i) get much higher/i, (message) ->
+  robot.hear /can we get much higher/i, (message) ->
     message.send "http://www.youtube.com/watch?v=SpKFDzVaJUM"
         
   robot.hear /i(')?ve made a huge mistake/i, (message) ->
