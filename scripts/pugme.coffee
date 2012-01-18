@@ -15,7 +15,7 @@ module.exports = (robot) ->
     msg.http("http://pugme.herokuapp.com/bomb?count=" + count)
       .get() (err, res, body) ->
 		i = 1;
-		i += 1 if i <= count
+		i = i + 1 if i <= count
         	msg.send pug for pug in JSON.parse(body).pugs + i
 			
 
