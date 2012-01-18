@@ -12,14 +12,11 @@ module.exports = (robot) ->
 
   robot.respond /pug bomb( (\d+))?/i, (msg) ->
     count = msg.match[2] || 5
-	i = 1
     msg.http("http://pugme.herokuapp.com/bomb?count=" + count)
       .get() (err, res, body) ->
-      	i++, msg.send i + pug for pug in JSON.parse(body).pugs
-			
+        msg.send i+" "+pug for pug,i in JSON.parse(body).pugs
 
   robot.respond /how many pugs are there/i, (msg) ->
     msg.http("http://pugme.herokuapp.com/count")
       .get() (err, res, body) ->
         msg.send "There are #{JSON.parse(body).pug_count} pugs."
-
